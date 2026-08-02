@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="x-icon" href="./img/tables.png" />
+    <title>HTML - TABLE P1</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid blue;
+        text-align: center;
+        padding: 5px;
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(17, 0, 255);
+      }
+      tr:nth-child(even) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/fr-bg.jpg" style="width: 300px" />
+    <table>
+      <!-- tr là Table Rows -->
+      <tr>
+        <!-- th là Table Header Cell -->
+        <th>First Name</th>
+        <th>Midle Name</th>
+        <th>Last Name</th>
+      </tr>
+      <tr>
+        <!-- td là Table Data Cell -->
+        <td style="width: 100px; height: 50px">Thuy</td>
+        <td style="width: 100px; height: 50px">Thanh</td>
+        <td style="width: 100px; height: 50px">Ma</td>
+      </tr>
+      <tr>
+        <td style="width: 100px; height: 50px">Anh</td>
+        <td style="width: 100px; height: 50px">Thi Ngoc</td>
+        <td style="width: 100px; height: 50px">Duong</td>
+      </tr>
+    </table>
+  </body>
+</html>
