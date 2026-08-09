@@ -1,0 +1,13 @@
+.hoa-1 {
+  @media screen {
+    max-width: 500px;
+    min-width: 200px;
+  }
+}
+
+.hoa-2 {
+  @media screen {
+    max-width: 200px;
+    min-width: 100px;
+  }
+}
