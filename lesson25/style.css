@@ -1,0 +1,26 @@
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 500px;
+  background: aquamarine;
+}
+
+.log-in-group {
+  padding: 15px;
+  background: azure;
+  border: 1px solid;
+  border-radius: 5%;
+  width: 430px;
+}
+
+.label-form {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.btn {
+  margin-bottom: 30px;
+  margin: 10px;
+  background: rgb(161, 202, 99);
+}
