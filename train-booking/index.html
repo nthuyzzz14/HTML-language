@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAIN BOOKING</title>
+</head>
+<body>
+  <div id="wrapper">
+
+    <header>
+      <h1>ĐẶT VÉ TÀU HOẢ</h1>
+    </header>
+
+    <main>
+
+      <div>
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" placeholder="Nhập họ và tên" />
+        </div>
+
+        <div>
+          <label>Giới tính</label>
+          <input type="radio" name="sex" value="male" /> Nam
+          <input type="radio" name="sex" value="female" /> Nữ
+        </div>
+
+        <div>
+          <label>Ga đi</label>
+          <select name="choose">
+            <option value="hanoi">Hà Nội</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Ga đến</label>
+          <select name="choose">
+            <option>Đà Nẵng</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Ngày đi</label>
+          <input type="date">
+        </div>
+
+        <div>
+          <label>Loại tàu</label>
+          <input type="radio" name="ticket">Tàu nhanh
+          <input type="radio" name="ticket">Tàu SE
+          <input type="radio" name="ticket">Tàu TN
+          <input type="radio" name="ticket">Tàu địa phương
+        </div>
+
+        <div>
+          <label>Loại ghế</label>
+          <input type="radio" name="ticket">Ghế ngồi mềm
+          <input type="radio" name="ticket">Ghế ngồi cứng
+          <input type="radio" name="ticket">Giường nằm điều hoà
+          <input type="radio" name="ticket">Giường nằm khoang 4
+        </div>
+
+        <div>
+          <label>Số lượng vé</label>
+          <select name="choose">
+            <option>1 vé</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Số điện thoại</label>
+          <input type="number" placeholder="Nhập số điện thoại">
+        </div>
+
+        <div>
+          <label>Email (nhận vé)</label>
+          <input type="email" placeholder="Nhập email">
+        </div>
+
+        <div>
+          <table width="800">
+            <tr>
+              <th>Thông tin khách hàng</th>
+            </tr>
+            <tr>
+              <th>STT</th>
+              <th>Họ và tên</th>
+              <th>Năm sinh</th>
+              <th>CMND/CCCD</th>
+            </tr>
+            <tr align="center">
+              <td>1</td>
+              <td>Nhập họ và tên</td>
+              <td>Năm sinh</td>
+              <td>Nhập số CMND/CCCD</td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <button type="submit">Đặt vé</button>
+          <button type="reset">Nhập lại</button>
+        </div>
+    </main>
+
+  </div>
+</body>
+</html>

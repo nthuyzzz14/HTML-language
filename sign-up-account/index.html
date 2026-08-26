@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP ACCOUNT</title>
+  </head>
+
+  <body>
+    <div class="sign-up-account">
+      <header>
+        <h1>ĐĂNG KÝ TÀI KHOẢN</h1>
+      </header>
+
+      <main>
+        <div>
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" placeholder="Nhập họ và tên" />
+        </div>
+
+        <div>
+          <label for="userName">Tên đăng nhập</label>
+          <input type="text" id="userName" placeholder="Nhập tên đăng nhập" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Nhập email của bạn" />
+        </div>
+
+        <div>
+          <label for="password">Nhập mật khẩu</label>
+          <input type="password" id="password" placeholder="Nhập mật khẩu " />
+        </div>
+
+        <div>
+          <label for="password">Xác nhập mật khẩu</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Nhập lại mật khẩu "
+          />
+        </div>
+
+        <div>
+          <label>Giới tính</label>
+          <input type="radio" name="sex" value="male" /> Nam
+          <input type="radio" name="sex" value="female" /> Nữ
+          <input type="radio" name="sex" value="other" /> Khác
+        </div>
+
+        <div>
+          <label>Ngày sinh</label>
+          <input type="date" />
+        </div>
+
+        <div>
+          <label>Sở thích</label>
+          <input type="checkbox" name="hobbies" value="read" />Đọc sách
+          <input type="checkbox" name="hobbies" value="traveling" />Du lịch
+          <input type="checkbox" name="hobbies" value="sports" />Thể thao
+          <input type="checkbox" name="hobbies" value="music" />Âm nhạc
+        </div>
+
+        <div>
+          <label>Ảnh đại diện</label>
+          <input type="file" name="file" accept="image.jpg" />
+        </div>
+
+        <div class="btn">
+          <button type="submit">Đăng ký</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
