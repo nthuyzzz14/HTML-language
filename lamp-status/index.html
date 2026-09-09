@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="product-images">
+          <div class="main-img">
+            <img src="./img/images.jpg" alt="Anhr đèn học" />
+            <button class="zoom-icon">🔍</button>
+          </div>
+          <div class="img-list">
+            <button>⟪</button>
+            <div class="scroll-imgs">
+              <img src="./img/images.jpg" alt="anh den hoc" />
+            </div>
+            <div class="scroll-imgs">
+              <img src="./img/images (1).jpg" alt="anh den hoc" />
+            </div>
+            <div class="scroll-imgs">
+              <img src="./img/images.jpg" alt="anh den hoc" />
+            </div>
+            <div class="scroll-imgs">
+              <img src="./img/images (1).jpg" alt="anh den hoc" />
+            </div>
+            <button>⟫</button>
+          </div>
+        </section>
+
+        <section class="product-infor">
+          <div class="name-product">
+            <h2>ĐÈN NGỦ CẢM ỨNG <br />HÌNH NẤM - ÁNH SÁNG VÀNG</h2>
+          </div>
+          <div class="detail">
+            <span class="product-code"
+              >Mã sản phẩm: <strong>DN001</strong></span
+            >
+            <span class="product-status">Tình trạng: Còn hàng</span>
+          </div>
+          <div class="price">
+            <p>499.000 VND</p>
+          </div>
+          <div class="light-colors">
+            <label>MÀU ÁNH SÁNG</label>
+            <div>
+              <input type="radio" name="light" value="cumber" class="cumber" />
+              Ánh sáng vàng
+              <input type="radio" name="light" value="white" class="white" />
+              Ánh sáng trắng
+            </div>
+          </div>
+          <div clasas="quantity-size">
+            <div class="quantity">
+              <label for="quantity"> SỐ LƯỢNG</label>
+              <br />
+              <input
+                type="number"
+                max="99"
+                min="1"
+                id="quantity"
+                placeholder="1"
+              />
+            </div>
+            <div class="size">
+              <label for="size">SIZE</label>
+              <br />
+              <select name="size" id="size">
+                <option value="small">Size nhỏ</option>
+              </select>
+            </div>
+          </div>
+          <div class="add-to-cart">
+            <button>THÊM VÀO GIỎ HÀNG</button>
+            <button>❤️</button>
+          </div>
+          <div class="buy-btn">
+            <button>MUA NGAY</button>
+          </div>
+          <div class="product-details">
+            <details open class="details">
+              <summary>Thông tin sản phẩm</summary>
+
+              <p>Kich thước:16 x 16 x 21 cm</p>
+              <p>Chất liệu: ABS, Gỗ</p>
+              <p>Nguồn sáng: Led tích hợp</p>
+              <p>Nguồn điện: USB SV</p>
+              <p>Bảo hành: 12 tháng</p>
+            </details>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

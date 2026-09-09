@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background-color: whitesmoke;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 1600px;
+  margin: auto;
+  display: flex;
+}
+
+/* list ảnh và ảnh */
+.main-img {
+  width: 800px;
+  height: 730px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.main-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+
+  object-fit: contain;
+  cursor: pointer;
+ 
+}
+
+.img-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scroll-imgs {
+  width: 160px;
+  height: 180px;
+   
+}
+
+.scroll-imgs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  transform: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+ 
+}
+
+.scroll-imgs img:hover {
+  transform: scale(1.05);
+}
+
+.img-list button {
+  width: 50px;
+  height: 180px;
+  transform: 0.3s;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 35px;
+}
+
+.img-list button:hover {
+  transform: scale(1.1);
+}
+
+/* icon zoom */
+.zoom-icon {
+  position: absolute;
+  right: 60px;
+  bottom: 50px;
+  width: 50px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 35px;
+  transform: 0.3s;
+}
+
+.zoom-icon:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Chi tiet san pham */
+.product-infor {
+  border: 1px solid #111;
+
+  width: 650px;
+  height: auto;
+}
+
+.name-product{
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0 0 30px 0 ;
+}
+
+.detail{
+  font-size: 15px;
+}
