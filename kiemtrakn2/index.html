@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin giỏ hàng</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="breadcrumb" aria-label="Điều hướng trang">
+        <span class="home-icon" aria-hidden="true">⌂</span>
+        <span>Giỏ hàng</span>
+        <span class="breadcrumb-separator">›</span>
+        <strong>Thông tin giỏ hàng của bạn</strong>
+      </nav>
+
+      <div class="checkout-layout">
+        <section class="cart-column" aria-labelledby="cart-title">
+          <h1 id="cart-title">Chi tiết sản phẩm trong giỏ hàng</h1>
+          <div class="product-list">
+            <article class="product-row">
+              <img
+                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&amp;fit=crop&amp;w=180&amp;q=80"
+                alt="Áo khoác gió"
+                class="product-image"
+              />
+              <div class="product-info">
+                <div class="product-name">Áo Khoác Gió Nam Thời Trang</div>
+                <div class="product-option">Trắng, M</div>
+              </div>
+              <div class="product-price">299.000 ₫</div>
+              <div class="quantity-control" aria-label="Số lượng sản phẩm">
+                <button type="button" aria-label="Giảm số lượng">−</button
+                ><span>1</span
+                ><button type="button" aria-label="Tăng số lượng">+</button>
+              </div>
+              <button type="button" class="update-button">Cập nhật</button
+              ><button
+                type="button"
+                class="remove-button"
+                aria-label="Xóa sản phẩm"
+              >
+                ×
+              </button>
+              <div class="line-total">= 299.000 ₫</div>
+            </article>
+            <article class="product-row">
+              <img
+                src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&amp;fit=crop&amp;w=180&amp;q=80"
+                alt="Áo chống nắng"
+                class="product-image"
+              />
+              <div class="product-info">
+                <div class="product-name">Áo Chống Nắng Nam Cao Cấp</div>
+                <div class="product-option">Trắng, M</div>
+              </div>
+              <div class="product-price">199.000 ₫</div>
+              <div class="quantity-control" aria-label="Số lượng sản phẩm">
+                <button type="button" aria-label="Giảm số lượng">−</button
+                ><span>1</span
+                ><button type="button" aria-label="Tăng số lượng">+</button>
+              </div>
+              <button type="button" class="update-button">Cập nhật</button
+              ><button
+                type="button"
+                class="remove-button"
+                aria-label="Xóa sản phẩm"
+              >
+                ×
+              </button>
+              <div class="line-total">= 199.000 ₫</div>
+            </article>
+            <div class="cart-total">
+              <span>Tổng cộng:</span><strong>498.000 ₫</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="buyer-column" aria-labelledby="buyer-title">
+          <h2 id="buyer-title">Thông tin người mua/nhận hàng</h2>
+          <form>
+            <label for="recipient">Tên</label
+            ><input id="recipient" type="text" placeholder="Tên người nhận" />
+            <label for="phone">Điện thoại liên hệ</label
+            ><input id="phone" type="tel" placeholder="Số điện thoại" />
+            <fieldset>
+              <legend>Hình thức nhận hàng</legend>
+              <label class="radio-label"
+                ><input type="radio" name="delivery" checked /> Nhận hàng tại
+                nhà thông qua giao diện</label
+              ><label class="radio-label"
+                ><input type="radio" name="delivery" /> Nhận hàng tại cửa hàng
+                Viettel gần nhất</label
+              >
+            </fieldset>
+            <label for="address">Địa chỉ nhận hàng</label
+            ><input id="address" type="text" placeholder="Địa chỉ nhận hàng" />
+            <label for="note">Ghi chú</label
+            ><textarea id="note" placeholder="Ghi chú (nếu có)"></textarea>
+            <button type="submit" class="submit-button">Đặt hàng</button
+            ><button type="button" class="continue-button">
+              Cần sản phẩm khác? Tiếp tục mua hàng
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

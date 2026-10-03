@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.booking-form-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.booking-form {
+  width: 700px;
+  max-width: 90%;
+  background: #f3f3f3;
+  border: 2px solid #fcc107;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 40px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #20a745;
+  border-radius: 6px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+select {
+  border-color: #1fc107;
+}
+
+.button-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  flex: 1;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1e88e5;
+}
+
+.btn-secondary {
+  background: #8d8d8d;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  max-width: 90vw;
+  z-index: 999;
+}
+
+.custom-alert.hidden {
+  display: none;
+}
+
+.alert-box {
+  background: rgba(12, 12, 12, 0.96);
+  border-radius: 0;
+  color: white;
+  padding: 18px 22px 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.alert-header {
+  font-size: 14px;
+  color: #d9d9d9;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.alert-box p {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.alert-box button {
+  position: absolute;
+  right: 25px;
+  bottom: 18px;
+  width: 150px;
+  height: 52px;
+  border-radius: 999px;
+  border: 2px solid #dfe7eb;
+  background: rgba(255, 255, 255, 0.1);
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #dfe7eb;
+}

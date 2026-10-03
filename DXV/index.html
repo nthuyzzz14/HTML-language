@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đơn xin việc</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="khung-trang">
+		<section class="khung-form" aria-labelledby="page-title">
+			<header class="tieu-de-form">
+				<h1 id="page-title">ĐƠN XIN VIỆC</h1>
+				<p>Nhập thông tin ứng tuyển. CV định dạng PDF</p>
+			</header>
+
+			<form id="application-form" novalidate>
+				<div class="luoi-form">
+					<div class="truong truong-loi">
+						<label for="full-name">Họ tên</label>
+						<input id="full-name" name="fullName" type="text" placeholder="Nguyễn Văn A" required aria-describedby="name-error">
+						<small id="name-error">Vui lòng nhập họ tên.</small>
+					</div>
+
+					  <div class="truong truong-loi">
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" placeholder="email@domain.com" required aria-describedby="email-error">
+						<small id="email-error">email không hợp lệ.</small>
+					</div>
+
+					  <div class="truong truong-loi">
+						<label for="phone">Điện thoại</label>
+						<input id="phone" name="phone" type="tel" placeholder="0xxxxxxxxx" pattern="0[0-9]{9}" required aria-describedby="phone-error">
+						<small id="phone-error">Số điện thoại phải gồm 10 chữ số và bắt đầu bằng 0.</small>
+					</div>
+
+					  <div class="truong">
+						<label for="gender">Giới tính</label>
+						<select id="gender" name="gender">
+							<option>Nam</option>
+							<option>Nữ</option>
+							<option>Khác</option>
+						</select>
+					</div>
+
+					  <div class="truong">
+						<label for="level">Trình độ</label>
+						<select id="level" name="level">
+							<option>Cao đẳng</option>
+							<option>Đại học</option>
+							<option>Trung cấp</option>
+							<option>Khác</option>
+						</select>
+					</div>
+
+					  <div class="truong">
+						<label for="experience">Kinh nghiệm (năm)</label>
+						<input id="experience" name="experience" type="number" min="0" max="40" placeholder="0 - 40">
+					</div>
+
+					  <div class="truong truong-rong">
+						<label for="skills">Kỹ năng</label>
+						<textarea id="skills" name="skills" rows="4" placeholder="VD: JavaScript, React, Node..."></textarea>
+					</div>
+
+					  <div class="truong truong-rong truong-cv">
+						<label for="cv">CV (PDF &lt; 5MB)</label>
+						<div class="dong-tep">
+							<label class="nut-tep" for="cv">Chọn tệp</label>
+							<span id="file-name">Không có tệp nào được chọn</span>
+							<input id="cv" name="cv" type="file" accept="application/pdf,.pdf" required>
+						</div>
+						<small>Chỉ chọn tệp PDF.</small>
+						<small id="file-error">Vui lòng chọn tệp CV (PDF).</small>
+					</div>
+				</div>
+
+				<div class="khu-vuc-nut">
+					<button class="nut nut-chinh" type="submit">Gửi hồ sơ</button>
+					<button class="nut nut-phu" type="reset">Làm lại</button>
+				</div>
+				<p class="thong-bao-thanh-cong" role="status" aria-live="polite"></p>
+			</form>
+		</section>
+	</main>
+
+	<script>
+		const form = document.querySelector('#application-form');
+		const fileInput = document.querySelector('#cv');
+		const fileName = document.querySelector('#file-name');
+		const fileError = document.querySelector('#file-error');
+		const successMessage = document.querySelector('.thong-bao-thanh-cong');
+
+		fileInput.addEventListener('change', () => {
+			const file = fileInput.files[0];
+			fileName.textContent = file ? file.name : 'Không có tệp nào được chọn';
+			fileError.hidden = !file || (file.type === 'application/pdf' && file.size <= 5 * 1024 * 1024);
+		});
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			successMessage.textContent = '';
+			form.querySelectorAll('.truong-loi').forEach((field) => field.classList.remove('truong-loi'));
+
+			const invalidFields = [...form.querySelectorAll('input[required]')].filter((input) => !input.checkValidity());
+			const file = fileInput.files[0];
+			const invalidFile = !file || file.type !== 'application/pdf' || file.size > 5 * 1024 * 1024;
+
+			invalidFields.forEach((input) => input.closest('.truong').classList.add('truong-loi'));
+			fileInput.closest('.truong').classList.toggle('truong-loi', invalidFile);
+			fileError.hidden = !invalidFile;
+
+			if (invalidFields.length === 0 && !invalidFile) {
+				successMessage.textContent = 'Hồ sơ của bạn đã sẵn sàng để gửi.';
+			}
+		});
+
+		form.addEventListener('reset', () => {
+			window.setTimeout(() => {
+				fileName.textContent = 'Không có tệp nào được chọn';
+				fileError.hidden = false;
+				successMessage.textContent = '';
+			});
+		});
+	</script>
+</body>
+</html>

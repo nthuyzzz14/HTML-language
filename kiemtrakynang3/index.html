@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Vé Xem Phim</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="booking-form-wrap">
+      <form id="bookingForm" class="booking-form">
+        <h1>Đặt Vé Xem Phim</h1>
+
+        <div class="field-group">
+          <label for="fullname">Họ và Tên:</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="Nhập họ và tên"
+            required />
+        </div>
+
+        <div class="field-group">
+          <label for="phone">Số điện thoại:</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Nhập số điện thoại"
+            required />
+        </div>
+
+        <div class="field-group">
+          <label for="movie">Phim:</label>
+          <div class="select-wrap">
+            <select id="movie" name="movie" required>
+              <option value="" selected disabled>Chọn phim</option>
+              <option value="Avatar: Dòng chảy của nước">
+                Avatar: Dòng chảy của nước
+              </option>
+              <option value="Spider-Man: Across the Spider-Verse">
+                Spider-Man: Across the Spider-Verse
+              </option>
+              <option value="Oppenheimer">Oppenheimer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="time">Giờ chiếu:</label>
+          <div class="select-wrap">
+            <select id="time" name="time" required>
+              <option value="" selected disabled>Chọn giờ chiếu</option>
+              <option value="09:00">09:00</option>
+              <option value="12:30">12:30</option>
+              <option value="15:45">15:45</option>
+              <option value="19:00">19:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="seat">Số ghế:</label>
+          <input
+            id="seat"
+            name="seat"
+            type="text"
+            placeholder="Nhập số ghế"
+            required />
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="btn btn-primary">Đặt Vé</button>
+          <button type="reset" class="btn btn-secondary">Xóa</button>
+        </div>
+      </form>
+    </main>
+
+    <div id="customAlert" class="custom-alert hidden" role="alert">
+      <div class="alert-box">
+        <div class="alert-header">
+          <span id="alertTime">127.0.0.1:5500 says</span>
+        </div>
+        <p id="alertMessage">Đặt vé thành công!</p>
+        <button id="alertOk" type="button">OK</button>
+      </div>
+    </div>
+
+    <script>
+      function showAlert(message) {
+        const alertBox = document.getElementById("customAlert");
+        const timeText = document.getElementById("alertTime");
+        const msgText = document.getElementById("alertMessage");
+
+        timeText.textContent = "127.0.0.1:5500 says";
+        msgText.textContent = message;
+        alertBox.classList.remove("hidden");
+        alertBox.style.display = "block";
+      }
+
+      document.getElementById("alertOk").addEventListener("click", function () {
+        const alertBox = document.getElementById("customAlert");
+        alertBox.classList.add("hidden");
+        alertBox.style.display = "none";
+      });
+
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const hoTen = document.getElementById("fullname").value.trim();
+          const sdt = document.getElementById("phone").value.trim();
+          const phim = document.getElementById("movie").value;
+          const gioChieu = document.getElementById("time").value;
+
+          if (hoTen.length <= 0 || hoTen.length > 20) {
+            showAlert("Họ tên phải nhập và độ dài không quá 20 ký tự.");
+            return;
+          }
+
+          if (!/^0\d{9}$/.test(sdt)) {
+            showAlert("Số điện thoại phải đúng 10 số và bắt đầu bằng 0.");
+            return;
+          }
+
+          if (!phim || !gioChieu) {
+            showAlert("Vui lòng chọn phim và giờ chiếu.");
+            return;
+          }
+
+          console.log("Họ tên:", hoTen);
+          console.log("Số điện thoại:", sdt);
+          console.log("Tên phim:", phim);
+          console.log("Giờ chiếu:", gioChieu);
+          showAlert("Đặt vé thành công!");
+        });
+    </script>
+  </body>
+</html>

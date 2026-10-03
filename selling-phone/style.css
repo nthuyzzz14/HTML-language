@@ -104,16 +104,15 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-
 }
 
-.banner-info{
+.banner-info {
   width: 470px;
   padding: left;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-.banner-info h1{
+.banner-info h1 {
   font-size: 35px;
   color: #222222;
   margin: 0 0 8px 0;
@@ -131,25 +130,24 @@ body {
   margin: 0;
 }
 
-.Banner-img{
+.Banner-img {
   width: 530px;
   height: 230px;
 }
 
-
-.Banner-img img{
+.Banner-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.product-list{
+.product-list {
   margin-top: 22px;
   display: flex;
   justify-content: space-between;
 }
 
-.product{
+.product {
   width: 320px;
   height: 400px;
   position: relative;
@@ -161,12 +159,12 @@ body {
   transition: 0.3s;
 }
 
-.product:hover{
+.product:hover {
   transform: scale(1.03);
   box-shadow: 0 5px 15px #eaf5ff;
 }
 
-.heart{
+.heart {
   position: absolute;
   top: 12px;
   height: 10px;
@@ -176,15 +174,15 @@ body {
   z-index: 1;
 }
 
-.produc-img{
+.produc-img {
   height: 270px;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   background-color: #fafafa;
 }
 
-.product-img img{
+.product-img img {
   max-width: 230px;
   max-height: 250px;
   object-fit: contain;
@@ -192,38 +190,38 @@ body {
   transform: 0.3s;
 }
 
-.product-info{
+.product-info {
   margin: 0 18px;
   border-top: 2px solid orange;
   padding-top: 12px;
 }
 
-.product-info h3{
+.product-info h3 {
   font-size: 20px;
   color: #222222;
   margin: 0 0 5px 0;
 }
 
-.status{
+.status {
   font-size: 12px;
   color: #222222;
   margin: 0 0 13px 0;
 }
 
-.price{
+.price {
   display: flex;
   align-items: center;
 }
 
-.new-price{
+.new-price {
   font-size: 20px;
   font-weight: bold;
   color: red;
 }
 
-.old-price{
+.old-price {
   font-size: 11px;
   color: #888888;
   margin-left: 60px;
-  text-decoration:line-through;
+  text-decoration: line-through;
 }

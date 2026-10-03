@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+  color: #222222;
+  padding: 0 20px;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.header {
+  height: 80px;
+  background-color: rgb(222, 242, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  gap: 130px;
+}
+
+/* logo */
+
+.quote {
+  font-size: 8px;
+  margin-left: 35px;
+}
+
+/*  thanh tim kiem */
+.search {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.search input {
+  width: 320px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  margin-left: 7px;
+}
+
+.search-icon {
+  font-size: 17px;
+  margin-right: 7px;
+}
+
+/*  account and cart */
+.acct-cart {
+  display: flex;
+  margin-right: 50px;
+  gap: 10px;
+}
+
+.account-btn,
+.cart-btn {
+  font-size: 13px;
+  padding: 4px 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.account-btn p,
+.cart-btn P {
+  font-size: 10px;
+  margin: 4px;
+}
+
+/* Thanh navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.nav a {
+  margin-right: 20px;
+  font-size: 13px;
+  color: #222222;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: rgb(63, 138, 63);
+}
+
+.nav a.active {
+  color: green;
+  border-bottom: 2px solid green;
+  padding-bottom: 8px;
+}
+
+.sp-derma{
+  width: 330px;
+  height: 330px;
+  border: 1px solid #cccccc;
+}

@@ -1,0 +1,190 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	margin: 0;
+	background: #f5f7ff;
+	color: #17243b;
+	font-family: Arial, sans-serif;
+}
+
+.khung-trang {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.khung-form {
+	width: 555px;
+	max-width: 100%;
+	padding: 20px 16px;
+	border: 1px solid #a9c6dd;
+	border-radius: 10px;
+	background: #e2f3ff;
+}
+
+.tieu-de-form {
+	margin-bottom: 18px;
+	text-align: center;
+}
+
+.tieu-de-form h1 {
+	margin: 0;
+	color: #5245e8;
+	font-size: 18px;
+}
+
+.tieu-de-form p {
+	margin: 5px 0 0;
+	color: #6e7890;
+	font-size: 11px;
+}
+
+.luoi-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+
+.truong {
+	min-width: 0;
+}
+
+.truong-rong {
+	grid-column: 1 / -1;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	border: 1px solid #9eb1c8;
+	border-radius: 7px;
+	padding: 8px;
+	color: #17243b;
+	font-size: 11px;
+}
+
+input,
+select {
+	height: 32px;
+}
+
+textarea {
+	min-height: 76px;
+	resize: vertical;
+}
+
+.truong-loi input,
+.truong-loi select,
+.truong-loi textarea,
+.truong-loi .dong-tep {
+	border-color: #ff3f46;
+}
+
+small {
+	display: none;
+	margin-top: 4px;
+	color: #ff3f46;
+	font-size: 10px;
+}
+
+.truong-loi small {
+	display: block;
+}
+
+.truong-cv small:not([hidden]) {
+	display: block;
+}
+
+.dong-tep {
+	display: flex;
+	align-items: center;
+	height: 30px;
+	border: 1px solid #9eb1c8;
+	border-radius: 7px;
+	background: #fff;
+}
+
+.nut-tep {
+	height: 100%;
+	padding: 7px 12px;
+	color: #fff;
+	background: #5d50e9;
+	cursor: pointer;
+	font-size: 11px;  
+}
+
+.dong-tep span {
+	overflow: hidden;
+	padding: 0 8px;
+	color: #758096;
+	font-size: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.khu-vuc-nut {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.nut {
+	width: 112px;
+	height: 28px;
+	border: 0;
+	border-radius: 7px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.nut-chinh {
+	background: #5d50e9;
+}
+
+.nut-phu {
+	background: #53627a;
+}
+
+.thong-bao-thanh-cong {
+	margin: 8px 0 0;
+	color: #16845c;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+@media (max-width: 520px) {
+	.khung-form {
+		padding: 18px 13px;
+	}
+
+	.luoi-form {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.truong-rong {
+		grid-column: auto;
+	}
+}

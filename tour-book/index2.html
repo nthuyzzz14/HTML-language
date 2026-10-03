@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Câu 2</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="header">
+        <h1>Nhập bất cứ nội dung gì</h1>
+      </div>
+      <form action="" id="ques-form">
+        <label for="content" style="display: block; font-size: 19px"
+          >Nhập nội dung câu hỏi:</label
+        >
+        <textarea name="content" id="content" cols="60" rows="10"></textarea>
+        <div class="btn">
+          <button
+            type="submit"
+            style="color: white; background-color: blue; padding: 5px">
+            Submit
+          </button>
+          <button
+            type="reset"
+            style="color: white; background-color: grey; padding: 5px">
+            Reset
+          </button>
+        </div>
+      </form>
+    </main>
+    <script>
+      const form = document.getElementById("ques-form");
+      const question = document.getElementById("content");
+
+      form.addEventListener("submit", (event) => {
+        // ngan viec tu dng tia lai trang truoc khi nhin thay ket qua
+        event.preventDefault();
+
+        const checkContent = question.value.trim(); // kiem tra chuỗi
+
+        if (checkContent === "") {
+          alert("Vui long nhap cau hoi !");
+          question.focus(); // dưa con trỏ lại textarea
+        }
+      });
+    </script>
+  </body>
+</html>

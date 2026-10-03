@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOUR BOOKING</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form action="" class="form-shell">
+        <header class="header-top">
+          <div class="intro">
+            <h1>Đặt Tour Du Lịch</h1>
+            <h4>Khám phá điểm đến yêu thích và gửi thông tin đặt tour.</h4>
+          </div>
+          <div class="img-introduction">
+            <img src="./img/images (5).jpg" alt="Da nang" />
+            <img src="./img/images.jpg" alt="Ha Noi" />
+            <img src="./img/anh-vinh-ha-long-24.jpg" alt="Ha Long" />
+          </div>
+        </header>
+        <section class="main-content">
+          <div class="grid-content">
+            <div class="content">
+              <label for="">Điểm đến</label>
+              <input type="text" placeholder="Đà Lạt, Đà Nẵng, ..." required />
+            </div>
+            <div class="content">
+              <label for="">Họ và tên</label>
+              <input type="text" placeholder="Nguyễn Văn A" required />
+            </div>
+            <div class="content">
+              <label for="">Email</label>
+              <input type="text" placeholder="example@gmail.com" required />
+            </div>
+            <div class="content">
+              <label for="">Ngày đi</label>
+              <input type="date" />
+            </div>
+            <div class="content">
+              <label for="">Ngày về</label>
+              <input type="date" />
+            </div>
+            <div class="content">
+              <label for="">Số người</label>
+              <input type="text" min="1" required value="2" />
+            </div>
+            <div class="large-content">
+              <label for="">Ghi chú</label>
+              <textarea name="" id="" row="6"></textarea>
+            </div>
+          </div>
+          <div class="btn">
+            <button>Đặt tour</button>
+          </div>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

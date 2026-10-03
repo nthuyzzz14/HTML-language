@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <div>
+          <label for="a">Số a:</label>
+          <br />
+          <input
+            id="a"
+            name="a"
+            type="text"
+            style="margin-bottom: 5px"
+            placeholder="Nhập số a" />
+        </div>
+        <div>
+          <label for="b">Số b:</label>
+          <br />
+          <input
+            id="b"
+            name="b"
+            type="text"
+            style="margin-bottom: 10px"
+            placeholder="Nhập số b" />
+        </div>
+        <div class="btn" style="display: flex; gap: 5px">
+          <button type="submit" style="color: white; background-color: blue">
+            Submit
+          </button>
+          <button type="reset" style="background-color: gray; color: white">
+            Reset
+          </button>
+        </div>
+        <p id="result"></p>
+      </form>
+    </main>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (event) => {
+        // Bảo document tìm tới phần từ có id là a và b và gán cho biến inputA và inputB
+        const inputA = document.getElementById("a");
+        const inputB = document.getElementById("b");
+
+        // lấy giá trị của inputA rồi gán cho biến a
+        // các giá trị được lấy ở đây vẫn là string
+        const a = inputA.value;
+        const b = inputB.value;
+
+        // Vòng lặp kiểm tra được nhập dữ liệu hay trống
+        if (a === "" || b === "") {
+          alert("Vui lòng nhập đầy đủ a và b !");
+          return;
+        }
+        // kiểm tra nếu có giá trị thì mới chuyển sang number
+        // nếu không thì return luôn
+
+        // chuyển string -> number để tính toán
+        const numberA = Number(a);
+        const numberB = Number(b);
+
+        // hàm tính toán
+        const result = numberA * numberA + numberB * numberB;
+
+        //in ra kết quả
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = "Kết quả " + result;
+
+        event.preventDefault(); // Tránh reload lại trang
+      });
+    </script>
+  </body>
+</html>

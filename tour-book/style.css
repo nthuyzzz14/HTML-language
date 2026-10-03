@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: whitesmoke;
+  color: #222222;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-shell {
+  width: 1050px;
+  height: 820px;
+  max-width: 100%;
+  border: 2px solid rgb(154, 219, 243);
+  border-radius: 10px;
+  background-color: #e0f2fe;
+}
+
+.header-top {
+  height: 220px;
+  margin-bottom: 50px;
+}
+
+.intro {
+  text-align: center;
+  margin: 25px 0 13px 0;
+}
+
+.intro h1 {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: rgb(44, 188, 104);
+}
+
+.intro h4 {
+  color: rgb(126, 125, 125);
+}
+
+.img-introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 188px;
+  gap: 13px;
+  padding: 0 20px;
+  margin-bottom: 16px;
+}
+
+.img-introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main-content {
+  border: 1px solid rgb(231, 230, 230);
+  width: 95%;
+  height: 410px;
+  padding: 15px;
+  margin: 24px;
+  border-radius: 10px;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.content label {
+  display: block;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.large-content label {
+  display: block;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.content input {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 7px;
+  width: 100%;
+  padding: 6px;
+  border-radius: 10px;
+  border: 4px solid #94b8a3;
+  font-size: 15px;
+  outline: none;
+}
+
+.content input:focus {
+  border-color: #a3b894;
+  box-shadow: 0 0 6px #bfdbfe;
+}
+
+.large-content {
+  grid-column: 1 / -1;
+}
+
+.large-content textarea {
+  width: 100%;
+  height: 105px;
+  border-radius: 10px;
+  border: 4px solid #94b8a3;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn button {
+  padding: 8px;
+  background-color: #6366f1;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px white;
+}
+
+.btn button:hover {
+  background-color: #4f46e5;
+}
+
+.btn button:active {
+  background-color: #3730a3;
+  transform: translateY(-4px);
+  box-shadow: 0 4 4px white;
+}
