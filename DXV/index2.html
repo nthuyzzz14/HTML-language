@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      border: 2px solid #5c65ff;
+      text-align: center;
+      background-color: rgb(16, 188, 16);
+      color: white;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    @media (max-width: 989px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <body>
+    <main class="container" id="container">
+      <div class="box" id="box">
+        <h2>Box 1</h2>
+      </div>
+      <div class="box" id="box">
+        <h2>Box 2</h2>
+      </div>
+      <div class="box" id="box">
+        <h2>Box 3</h2>
+      </div>
+    </main>
+  </body>
+</html>

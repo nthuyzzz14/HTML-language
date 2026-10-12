@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="fora" id="fora">
+      <div>
+        <label for="">Số a:</label>
+        <input type="text" name="a" id="a" />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+      <p id="result"></p>
+    </form>
+    <script>
+      const form = document.getElementById("fora");
+
+      form.addEventListener("submit", (event) => {
+        // ngan vien reload trang truoc khi nhin thay ket qua
+        event.preventDefault();
+
+        // truy cap input
+        const inputA = document.getElementById("a");
+
+        // gan gia tri vao 1 bien moi
+        const a = inputA.value;
+
+        // kiem tra neu a rong
+        if (a === "") {
+          alert("Vui long nhap a !");
+          return;
+        }
+
+        // hien tai value a la string
+        // ta can string -> number
+        const numberA = Number(a);
+
+        // cong thuc tinh toan cua de bai
+        const method = numberA * numberA * numberA * numberA * numberA;
+
+        //ham in ra ket qua
+        const kq = document.getElementById("result");
+        kq.textContent = "Ket qua: " + method;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.khung-form {
+  border: 1px solid rgb(207, 207, 207);
+  max-width: 100%;
+  height: 723px;
+  padding: 15px 8px;
+  background-color: #e0f2fe;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #e0fef2;
+}
+
+.head-form {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.head-form h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: rgb(66, 23, 255);
+}
+
+.head-form p {
+  font-size: 14px;
+  color: grey;
+}
+
+.main-form {
+  padding: 10px 8px;
+  height: 490px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bolder;
+}
+
+small {
+  display: block;
+}
+
+.grid-field input,
+select {
+  border: none;
+  width: 100%;
+  padding: 7px;
+  border: 4px solid #94b8a3;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.grid-field input:hover,
+select:hover {
+  border: 4px solid #a3b894;
+}
+
+textarea {
+  border: none;
+  width: 100%;
+  height: 170px;
+  border: 4px solid #94b8a3;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+textarea:hover {
+  border: 4px solid #a3b894;
+}
+
+.foot-form {
+  padding: 8px;
+  height: 140px;
+}
+
+.foot-form label {
+  margin-bottom: 6px;
+}
+
+.file-btn input {
+  margin-bottom: 5px;
+}
+
+.file-btn small {
+  margin-bottom: 3px;
+}
+
+.hj {
+  color: red;
+}
+
+.btn-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-zone button {
+  padding: 10px;
+  color: white;
+  background-color: grey;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid grey;
+  transition: 0.3s;
+}
+
+.btn-zone button:hover {
+  background-color: rgb(104, 40, 252);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 605px) {
+  .grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    height: auto;
+  }
+  .khung-form {
+    width: auto;
+  }
+  .btn-zone {
+    flex-direction: column;
+  }
+  textarea {
+    width: auto;
+    height: auto;
+  }
+}
