@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <div>
+        <label for="">Số a:</label>
+        <input type="text" class="a" id="a" placeholder="Nhập số a" />
+      </div>
+
+      <div>
+        <label for="">Số b</label>
+        <input type="text" class="b" id="b" placeholder="Nhập số b" />
+      </div>
+      <div style="display: flex; gap: 5px">
+        <button type="submit" style="background-color: blue; color: white">
+          Submit
+        </button>
+        <button type="reset" style="background-color: grey; color: white">
+          Reset
+        </button>
+      </div>
+      <p id="result"></p>
+    </form>
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (event) => {
+        //ngqn khogn reload trang
+        event.preventDefault();
+
+        //chi DOM tro toi 2 phan tu a va b trong html
+        const a = document.getElementById("a");
+        const b = document.getElementById("b");
+
+        // bat loi neu nhu phan tui khong duoc nhap vao  hoac rong
+        if (a === "" || b === "") {
+          alert("Vui long nhap thong tin !");
+        }
+
+        // lay gia tri ra
+        const valueA = a.value;
+        const valueB = b.value;
+
+        //gia tri sau khi lay ra la string
+        // -> ta can chuyen thanh number de tinh toan
+        const numberA = Number(valueA);
+        const numberB = Number(valueB);
+
+        // tinh  toan
+        const method = numberA * numberA + numberB * numberB;
+
+        // hien thi ket qua
+        const result = document.getElementById("result");
+        result.textContent = "Ket qua: " + method;
+      });
+    </script>
+  </body>
+</html>
